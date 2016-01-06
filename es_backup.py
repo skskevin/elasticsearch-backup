@@ -13,7 +13,7 @@ BAK_DIR="/var/wd/elasticsearch_backup/data"
 ZIP_DIR="/var/wd/elasticsearch_backup/zip"
 
 if __name__=='__main__':
-    date=time.strftime('%Y.%m.%d',time.localtime(time.time()-86400*50))
+    date=time.strftime('%Y.%m.%d',time.localtime(time.time()-86400))
 
     data1={"type": "fs","settings": {"location":BAK_DIR ,"compress": True}}
     r1=requests.post(URL,simplejson.dumps(data1))
